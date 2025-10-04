@@ -1,0 +1,15 @@
+Pseudocodigo
+
+Inicio
+
+SistemaA: Mostrar formulario de venta al usuario Capturar datos: cliente, producto, cantidad, precio, método de pago Enviar datos como solicitud SOAP/XML al endpoint http://localhost:3000/soap
+
+ExpressAPI: Recibir solicitud SOAP/XML Verificar token de autenticación Parsear XML → extraer campos de venta Convertir datos a formato JSON Enviar JSON mediante POST a http://system-b/api
+
+SistemaB: Recibir JSON con datos de venta Validar y almacenar en base de datos Retornar respuesta de éxito o error
+
+ExpressAPI: Construir respuesta SOAP/XML con resultado Enviar respuesta de vuelta a SistemaA
+
+SistemaA: Mostrar confirmación al usuario
+
+Fin
